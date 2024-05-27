@@ -1,21 +1,10 @@
-// Initial state
-const initialState = {
-  count: 0,
-  // Initialize other state properties here
-};
+import { combineReducers } from 'redux';
+import countReducer from './count/reducers';
+import personalReducer from './personal/reducers';
 
-// Root reducer
-const rootReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      console.log({state})
-      return { ...state, count: state.count + 1 };
-    case 'DECREMENT':
-      return { ...state, count: state.count - 1 };
-    // Handle other action types here
-    default:
-      return state;
-  }
-};
+const rootReducer = combineReducers({
+  count: countReducer,
+  personal: personalReducer,
+});
 
 export default rootReducer;

@@ -1,6 +1,7 @@
 
 import './App.css';
 import Counter from './counter';
+import Personal from './personal';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         </h1>
       </header>
       <Counter />
+      <Personal />
     </div>
   );
 }
