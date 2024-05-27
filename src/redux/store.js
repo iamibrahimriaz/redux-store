@@ -4,9 +4,7 @@ import { thunk } from "redux-thunk";
 import rootReducer from "./rootReducers";
 
 // initial states here
-const initialState = {
-  count: 0
-};
+const initialState = {};
 
 // Create store (with devtools if available)
 const store = createStore(

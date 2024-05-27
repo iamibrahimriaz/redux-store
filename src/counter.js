@@ -1,7 +1,7 @@
 // Counter.js
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { decrement, increment, incrementAsync } from './redux/actions';
+import { decrementCount, incrementCount, incrementCountAsync } from './redux/count/actions';
 
 const Counter = () => {
   const count = useSelector(state => state.count);
@@ -10,9 +10,9 @@ const Counter = () => {
   return (
     <div>
       <h1>{count}</h1>
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <button onClick={() => dispatch(decrement())}>Decrement</button>
-      <button onClick={() => dispatch(incrementAsync())}>Increment Async</button>
+      <button onClick={() => dispatch(incrementCount())}>Increment</button>
+      <button onClick={() => dispatch(decrementCount())}>Decrement</button>
+      <button onClick={() => dispatch(incrementCountAsync())}>Increment Async</button>
     </div>
   );
 };

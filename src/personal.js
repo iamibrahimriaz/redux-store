@@ -1,26 +1,25 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-    decrementFamilyCount,
-    decrementFriendsCount,
-    decrementRelativesCount,
-    incrementFamilyCount,
-    incrementFriendsCount,
-    incrementRelativesCount,
+  decrementFamilyCount,
+  decrementFriendsCount,
+  decrementRelativesCount,
+  incrementFamilyCount,
+  incrementFriendsCount,
+  incrementRelativesCount,
 } from './redux/personal/actions';
 import {
-    getFamilyCount,
-    getFriendsCount,
-    getRelativesCount,
+  getFamilyCount,
+  getFriendsCount,
+  getRelativesCount,
 } from './redux/personal/selectors';
 
 const Personal = () => {
   const familyCount = useSelector(getFamilyCount);
   const friendsCount = useSelector(getFriendsCount);
   const relativesCount = useSelector(getRelativesCount);
+  
   const dispatch = useDispatch();
-
-  console.log('Perosnal Count', {familyCount, friendsCount, relativesCount})
 
   return (
     <div>
